@@ -1,0 +1,622 @@
+/*
+==================================================
+ PHANTOM TERMINAL INTERFACE THEME
+ Fallout-inspired archival terminal styling
+ Bootstrap 5.3.x compatible
+==================================================
+*/
+
+
+/*
+==================================================
+ ROOT VARIABLES
+==================================================
+*/
+
+:root {
+    --phantom-bg: #050505;
+    --phantom-bg-alt: #0a0a0a;
+    --phantom-panel: #101010;
+
+    --phantom-green: #33ff33;
+    --phantom-green-bright: #66ff66;
+    --phantom-green-soft: #99ff99;
+
+    --phantom-yellow: #ffff66;
+    --phantom-red: #ff6666;
+
+    --phantom-border: #225522;
+
+    --phantom-font:
+        "Courier New",
+        Courier,
+        monospace;
+
+    --phantom-mono:
+        "Ubuntu Mono",
+        "Courier New",
+        monospace;
+}
+
+
+/*
+==================================================
+ BASE DOCUMENT
+==================================================
+*/
+
+body {
+    font-family: var(--phantom-font);
+    font-size: 14px;
+    line-height: 1.6;
+
+    color: var(--phantom-green);
+    background: var(--phantom-bg);
+
+    max-width: none;
+    margin: 0 auto;
+    padding: 2rem;
+
+    text-shadow:
+        0 0 5px rgba(51,255,51,.4);
+}
+
+
+.document {
+    max-width: 1100px;
+}
+
+
+/*
+==================================================
+ HEADERS
+==================================================
+*/
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--phantom-font);
+    font-weight: bold;
+
+    color: var(--phantom-green-bright);
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+h1::before,
+h2::before {
+    content: "> ";
+}
+
+
+a {
+    color: var(--phantom-green-soft);
+}
+
+
+/*
+==================================================
+ BOOTSTRAP CARDS
+==================================================
+*/
+
+.card {
+    background: var(--phantom-bg);
+    border: 1px solid var(--phantom-border);
+    color: var(--phantom-green);
+}
+
+
+.card-header {
+    background: var(--phantom-bg);
+    color: var(--phantom-green-bright);
+
+    border-bottom:
+        1px solid var(--phantom-border);
+
+    font-family: var(--phantom-font);
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 5px rgba(51,255,51,.4);
+}
+
+
+.card-body {
+    background: var(--phantom-bg);
+    color: var(--phantom-green);
+}
+
+
+.card-footer {
+    background: var(--phantom-bg);
+
+    border-top:
+        1px solid var(--phantom-border);
+
+    color: var(--phantom-green-soft);
+}
+
+
+/*
+==================================================
+ LIST GROUPS
+==================================================
+*/
+
+.list-group-item {
+    background: var(--phantom-bg);
+
+    color: var(--phantom-green);
+
+    border:
+        1px solid var(--phantom-border);
+
+    font-family: var(--phantom-font);
+}
+
+
+.list-group-item:hover {
+    background: var(--phantom-bg-alt);
+    color: var(--phantom-green-bright);
+}
+
+
+.list-group-item::before {
+    content: "> ";
+    color: var(--phantom-green-bright);
+}
+
+
+.card .list-group {
+    border:
+        1px solid var(--phantom-border);
+}
+
+
+.card .list-group-item {
+    border-color:
+        var(--phantom-border);
+}
+
+
+/*
+==================================================
+ STATUS STATES
+==================================================
+*/
+
+.status-ok {
+    color: var(--phantom-green-bright);
+}
+
+.status-warning {
+    color: var(--phantom-yellow);
+}
+
+.status-failure {
+    color: var(--phantom-red);
+}
+
+
+/*
+==================================================
+ TERMINAL ELEMENTS
+==================================================
+*/
+
+.terminal {
+    background: var(--phantom-panel);
+
+    color: #8cff8c;
+
+    font-family: var(--phantom-mono);
+
+    border-left:
+        5px solid #198754;
+}
+
+
+.terminal-title {
+    color: white;
+}
+
+
+blockquote {
+    border-left:
+        3px solid var(--phantom-green);
+
+    padding-left: 1rem;
+    margin-left: 0;
+
+    color: var(--phantom-green-soft);
+
+    font-style: italic;
+}
+
+
+code,
+pre {
+    font-family: var(--phantom-font);
+
+    background:
+        var(--phantom-bg-alt);
+
+    color:
+        var(--phantom-green);
+
+    border:
+        1px solid var(--phantom-border);
+}
+
+
+pre {
+    padding: 1em;
+    overflow-x:auto;
+}
+
+
+/*
+==================================================
+ NAVIGATION
+==================================================
+*/
+
+.nav,
+.navbar {
+
+    background:
+        var(--phantom-bg) !important;
+
+    border:
+        1px solid var(--phantom-border);
+
+    font-family:
+        var(--phantom-font);
+}
+
+
+.nav {
+    padding:.5rem;
+}
+
+
+.nav-link,
+.navbar-nav .nav-link {
+
+    color:
+        var(--phantom-green) !important;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        1px;
+}
+
+
+.nav-link::before {
+    content: "> ";
+}
+
+
+.nav-link:hover,
+.nav-link.active {
+
+    color:
+        var(--phantom-green-bright) !important;
+
+    background:
+        var(--phantom-bg-alt);
+
+    border-color:
+        var(--phantom-border);
+}
+
+
+.navbar-brand {
+
+    color:
+        var(--phantom-green-bright) !important;
+
+    font-weight:bold;
+}
+
+
+/*
+==================================================
+ TABLES
+==================================================
+*/
+
+.table {
+
+    --bs-table-bg: transparent;
+    --bs-table-color: var(--phantom-green);
+    --bs-table-border-color: var(--phantom-border);
+
+    color:
+        var(--phantom-green);
+
+    background:
+        var(--phantom-bg);
+
+    border:
+        1px solid var(--phantom-border);
+
+    font-family:
+        var(--phantom-font);
+}
+
+
+.table th {
+
+    color:
+        var(--phantom-green-bright);
+
+    background:
+        var(--phantom-bg-alt);
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        .08em;
+}
+
+
+.table td {
+
+    color:
+        var(--phantom-green);
+
+    background:
+        transparent;
+
+    border-color:
+        var(--phantom-border);
+}
+
+
+.table a {
+    color:
+        var(--phantom-green-bright);
+}
+
+
+/*
+==================================================
+ ALERTS
+==================================================
+*/
+
+.alert {
+
+    background:
+        var(--phantom-bg);
+
+    color:
+        var(--phantom-green);
+
+    border:
+        1px solid var(--phantom-border);
+
+    font-family:
+        var(--phantom-font);
+}
+
+
+.alert-secondary::before {
+
+    content:
+        "[SYSTEM MESSAGE] ";
+
+    color:
+        var(--phantom-green-bright);
+
+    font-weight:bold;
+}
+
+
+/*
+==================================================
+ SPECIAL CARDS
+==================================================
+*/
+
+.recipe-card {
+    height:100%;
+}
+
+
+.component-card {
+    border-left:
+        5px solid #0d6efd;
+}
+
+
+.unique-card {
+    border-left:
+        5px solid #dc3545;
+}
+
+
+.machine-card {
+    border-left:
+        5px solid #ffc107;
+}
+
+/*
+==================================================
+ BOOTSTRAP ACCORDION
+==================================================
+*/
+
+.accordion {
+
+    --bs-accordion-bg:
+        var(--phantom-bg);
+
+    --bs-accordion-color:
+        var(--phantom-green);
+
+    --bs-accordion-border-color:
+        var(--phantom-border);
+
+    --bs-accordion-btn-bg:
+        var(--phantom-bg);
+
+    --bs-accordion-btn-color:
+        var(--phantom-green-bright);
+
+    --bs-accordion-active-bg:
+        var(--phantom-bg-alt);
+
+    --bs-accordion-active-color:
+        var(--phantom-green-soft);
+
+    --bs-accordion-btn-focus-box-shadow:
+        0 0 0 .25rem rgba(51,255,51,.15);
+
+    font-family:
+        var(--phantom-font);
+}
+
+
+.accordion-item {
+
+    background:
+        var(--phantom-bg);
+
+    color:
+        var(--phantom-green);
+
+    border:
+        1px solid var(--phantom-border);
+}
+
+
+.accordion-button {
+
+    background:
+        var(--phantom-bg);
+
+    color:
+        var(--phantom-green-bright);
+
+    font-family:
+        var(--phantom-font);
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        1px;
+
+    text-shadow:
+        0 0 5px rgba(51,255,51,.4);
+}
+
+
+.accordion-button::before {
+
+    content:
+        "> ";
+
+    color:
+        var(--phantom-green-bright);
+}
+
+
+.accordion-button:not(.collapsed) {
+
+    background:
+        var(--phantom-bg-alt);
+
+    color:
+        var(--phantom-green-soft);
+
+    box-shadow:
+        inset 0 -1px 0 var(--phantom-border);
+}
+
+
+.accordion-button:hover {
+
+    color:
+        var(--phantom-green-soft);
+}
+
+
+.accordion-button:focus {
+
+    border-color:
+        var(--phantom-border);
+
+    box-shadow:
+        0 0 0 .25rem rgba(51,255,51,.15);
+}
+
+
+.accordion-button::after {
+
+    filter:
+        invert(78%)
+        sepia(100%)
+        saturate(300%)
+        hue-rotate(70deg);
+}
+
+
+.accordion-button:not(.collapsed)::after {
+
+    filter:
+        invert(90%)
+        sepia(100%)
+        saturate(400%)
+        hue-rotate(70deg);
+}
+
+
+.accordion-body {
+
+    background:
+        var(--phantom-bg);
+
+    color:
+        var(--phantom-green);
+
+    border-top:
+        1px solid var(--phantom-border);
+}
+/*
+==================================================
+ CRT EFFECT
+==================================================
+*/
+
+body::before {
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background:
+    repeating-linear-gradient(
+        0deg,
+        rgba(255,255,255,.03),
+        rgba(255,255,255,.03) 1px,
+        transparent 1px,
+        transparent 3px
+    );
+}
