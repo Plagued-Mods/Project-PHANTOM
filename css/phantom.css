@@ -27,6 +27,12 @@
 
     --phantom-border: #225522;
 
+    --phantom-accent-success: #198754;
+    --phantom-accent-primary: #0d6efd;
+    --phantom-accent-danger: #dc3545;
+    --phantom-accent-warning: #ffc107;
+    --phantom-accent-white: #ffffff;
+
     --phantom-font:
         "Courier New",
         Courier,
@@ -54,7 +60,6 @@ body {
     background: var(--phantom-bg);
 
     max-width: none;
-    margin: 0 auto;
     padding: 2rem;
 
     text-shadow:
@@ -88,7 +93,9 @@ h4 {
 
 
 h1::before,
-h2::before {
+h2::before,
+h3::before,
+h4::before {
     content: "> ";
 }
 
@@ -219,12 +226,12 @@ a {
     font-family: var(--phantom-mono);
 
     border-left:
-        5px solid #198754;
+        5px solid var(--phantom-accent-success);
 }
 
 
 .terminal-title {
-    color: white;
+    color: var(--phantom-accent-white);
 }
 
 
@@ -337,15 +344,12 @@ pre {
 
 .table {
 
-    --bs-table-bg: transparent;
+    --bs-table-bg: var(--phantom-bg);
     --bs-table-color: var(--phantom-green);
     --bs-table-border-color: var(--phantom-border);
 
     color:
         var(--phantom-green);
-
-    background:
-        var(--phantom-bg);
 
     border:
         1px solid var(--phantom-border);
@@ -437,19 +441,19 @@ pre {
 
 .component-card {
     border-left:
-        5px solid #0d6efd;
+        5px solid var(--phantom-accent-primary);
 }
 
 
 .unique-card {
     border-left:
-        5px solid #dc3545;
+        5px solid var(--phantom-accent-danger);
 }
 
 
 .machine-card {
     border-left:
-        5px solid #ffc107;
+        5px solid var(--phantom-accent-warning);
 }
 
 /*
@@ -558,9 +562,6 @@ pre {
 
     border-color:
         var(--phantom-border);
-
-    box-shadow:
-        0 0 0 .25rem rgba(51,255,51,.15);
 }
 
 
